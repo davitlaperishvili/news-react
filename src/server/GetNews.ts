@@ -1,10 +1,13 @@
 import {API_KEY, BASE_URL} from "./vars"
-export default async function getPosts(filterPrase: string = "", serachWhere: string = "everything") {
-    const response = await fetch(`${BASE_URL}${serachWhere}?q=${filterPrase}&pageSize=10`, {
+export default async function getPosts(action: string = "", paramsObj: BodyInit) {
+    const response = await fetch(`${BASE_URL}${action}`, {
+        method: "POST",
         headers: {
-            "X-Api-Key": API_KEY
-        }
+            "Content-Type": "application/json"
+        },
+        body: paramsObj
     })
+    
     const data = await response.json()
     return data
 }

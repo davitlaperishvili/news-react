@@ -1,2 +1,2 @@
-export const API_KEY = "e21486c4b44e47b98d844c5a0885fe13";
-export const BASE_URL = "https://newsapi.org/v2/";
+export const API_KEY = "4242322a-5555-4ed5-bd07-a32c2c43693f";
+export const BASE_URL = "https://eventregistry.org/api/v1/article/";

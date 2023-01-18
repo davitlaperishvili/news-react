@@ -1,5 +1,5 @@
-import MainContainer from 'layouts/MainContainer/MainContainer'
-import PageWrapper from 'layouts/PageWrapper'
+import MainContainer from '../layouts/MainContainer/MainContainer'
+import PageWrapper from '../layouts/PageWrapper'
 import React from 'react'
 export default function about() {
   return (

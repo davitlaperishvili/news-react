@@ -1,5 +1,5 @@
-import Footer from "blocks/footer/Footer";
-import Header from "blocks/header/Header";
+import Footer from "../blocks/footer/Footer";
+import Header from "../blocks/header/Header";
 
 type PageWrapperProps = {
   children: React.ReactNode; // 👈️ type children

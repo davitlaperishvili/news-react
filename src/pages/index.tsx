@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <PageWrapper>
       <MainContainer>
-        <h1>Index Page</h1>
+        <h1>Index Page changed</h1>
       </MainContainer>
     </PageWrapper>
   )

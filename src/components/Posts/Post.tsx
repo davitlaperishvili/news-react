@@ -2,8 +2,14 @@ import Link from 'next/link'
 import React from 'react'
 import styles from "./posts_list.module.scss"
 
-export default function Post({title, image, description, author, url}) {
-    
+export default function Post(props: {
+    title: string;
+    image: string;
+    description: string;
+    author: string;
+    url: string
+}) {
+    const {title, image, description, author, url} = props
   return (
     <article className={styles.news_post}>
         <h3 className={styles.post_title}><span>{title}</span></h3>

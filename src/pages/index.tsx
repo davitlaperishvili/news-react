@@ -7,8 +7,25 @@ import Image from 'next/image'
 import Link from 'next/link';
 import { API_KEY } from '@/server/vars';
 import PostsList from '@/components/Posts/PostsList';
-
-export default function Home({news} : {news: object}) {
+type postsType = {
+  news: {
+      articles: {
+          results: postType;
+      }
+  };
+};
+interface postType {
+  url: string;
+  title: string;
+  image: string;
+  description: string;
+  map: Function;
+  authors: authors[]
+}
+interface authors {
+  name: string;
+}
+export default function Home({news} : postsType) {
  
   return (
     <PageWrapper>

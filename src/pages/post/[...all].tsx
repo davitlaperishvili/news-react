@@ -36,6 +36,11 @@ interface info {
 }
 
 export default function PostInside(props: {post: postType; uri: string}) {
+  if(!props.post){
+    return (
+      <div>Loading...</div>
+    )
+  }
   const postUri = props.uri;
   const postInfo = props.post[postUri as keyof typeof props.post].info;
   type OnlyKeys = keyof typeof props.post;
@@ -71,6 +76,7 @@ PostInside.getInitialProps = async (context: {
   query: {
     all: [0]
   }
+  req: {}
 }) => {
   const uri: string = context.query.all[0].toString();
   const requestObj = {

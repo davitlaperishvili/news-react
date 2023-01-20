@@ -54,7 +54,7 @@ export default function PostInside(props: {post: postType; uri: string}) {
         <article className={classes.post_inside}>
             <h1 className={classes.post_title}>{postInfo.title}</h1>
             <figure>
-              <img src={postInfo.image} alt={postInfo.title} />
+              <img src={postInfo.image ?? "../no_image.jpg"} alt={postInfo.title} />
             </figure>
             <div className={classes.post_content}>{postInfo.body}</div>
             <div className={classes.post_details}>

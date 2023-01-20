@@ -15,7 +15,7 @@ export default function Post(props: {
         <h3 className={styles.post_title}><span>{title}</span></h3>
         <figure>
             <Link href={`/post/${url}`}>
-                <img src={image} alt={title} />
+                <img src={image ?? "../no_image_small.png"} alt={title} />
             </Link>
         </figure>
         <div className={styles.post_excerpt}>{description}</div>

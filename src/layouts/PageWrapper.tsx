@@ -9,7 +9,7 @@ export default function PageWrapper(props: PageWrapperProps) {
   return (
     <main className="page_wrapper">
       <Header/>
-      {props.children}
+        <div className="page_content">{props.children}</div>
       <Footer/>
     </main>
   )

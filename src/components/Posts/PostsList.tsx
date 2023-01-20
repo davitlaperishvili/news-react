@@ -15,7 +15,8 @@ interface postType {
     image: string;
     description: string;
     map: Function;
-    authors: authors[]
+    authors: authors[];
+    uri: string
 }
 interface authors {
     name: string;
@@ -25,23 +26,20 @@ export default function PostsList(props: postsType) {
     const news = props.news
     function renderPosts () {
         return news.articles.results.map( (post: postType) => {
-            console.log(post)
-            const url = (new URL(post.url)).pathname;
             let author = ""
             if(post.authors.length > 0){
                 author += post.authors[0].name
             }else{
                 author += "No Data"
             }
-            console.log(author)
           return (
             <Post 
-                key={uid(post)} 
+                key={post.uri} 
                 title={post.title} 
                 image={post.image} 
                 description={post.description} 
                 author={author} 
-                url={url}
+                url={post.uri}
             />
           )
         })

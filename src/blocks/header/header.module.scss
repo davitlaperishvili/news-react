@@ -1,0 +1,26 @@
+@import "../../source/scss/base/general.scss";
+header.main_header{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $ccorp;
+    z-index: 10;
+    .header_wrap{
+        .site_menu{
+            padding: 20px 0;
+            .navigation{
+                ul{
+                    @extend .no-list;
+                    display: flex;
+                    align-items: center;
+                    gap: 30px;
+                    li{
+                        a{
+                            color: $cwhite;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

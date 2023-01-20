@@ -20,7 +20,8 @@ interface postType {
   image: string;
   description: string;
   map: Function;
-  authors: authors[]
+  authors: authors[];
+  uri: string
 }
 interface authors {
   name: string;

@@ -7,14 +7,14 @@ export default function Post(props: {
     image: string;
     description: string;
     author: string;
-    url: string
+    url: string;
 }) {
     const {title, image, description, author, url} = props
   return (
     <article className={styles.news_post}>
         <h3 className={styles.post_title}><span>{title}</span></h3>
         <figure>
-            <Link href={`/post${url}`}>
+            <Link href={`/post/${url}`}>
                 <img src={image} alt={title} />
             </Link>
         </figure>
@@ -22,7 +22,7 @@ export default function Post(props: {
         <div className={styles.post_bottom}>
             <div className={styles.author_name}><span>Author:</span> {author}</div>
             <div className={styles.read_more}>
-                <Link href={`/post${url}`}>Read More</Link>
+                <Link href={`/post/${url}`}>Read More</Link>
             </div>
         </div>
     </article>

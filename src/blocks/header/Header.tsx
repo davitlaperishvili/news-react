@@ -8,6 +8,11 @@ export default function Header() {
     <header className={`${classes.main_header} trans-all-4`}>
       <MainContainer>
         <div className={classes.header_wrap}>
+          <div className={classes.logo}>
+            <Link href="/">
+              <img src="../logo.png" alt="" />
+            </Link>
+          </div>
           <div className={classes.site_menu}>
             <nav className={classes.navigation}>
               <ul>

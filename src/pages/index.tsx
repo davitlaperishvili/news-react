@@ -31,7 +31,7 @@ export default function Home({news} : postsType) {
   return (
     <PageWrapper>
       <MainContainer>
-        <h1 className='page_title'>Index Page</h1>
+        <h1 className='page_title'>See All News</h1>
         <PostsList news={news}/>
       </MainContainer>
     </PageWrapper>
@@ -43,7 +43,7 @@ Home.getInitialProps = async () => {
     action: "getArticles",
     lang: "eng",
     articlesPage: 1,
-    articlesCount: 10,
+    articlesCount: 50,
     resultType: "articles",
     apiKey: API_KEY,
     articlesSortBy: "date",

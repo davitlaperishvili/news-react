@@ -6,8 +6,18 @@ header.main_header{
     background-color: $ccorp;
     z-index: 10;
     .header_wrap{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px 0;
+        .logo{
+            a{
+                img{
+                    width: 70px;
+                }
+            }
+        }
         .site_menu{
-            padding: 20px 0;
             .navigation{
                 ul{
                     @extend .no-list;

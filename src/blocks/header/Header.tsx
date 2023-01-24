@@ -2,6 +2,7 @@ import MainContainer from '../../layouts/MainContainer/MainContainer'
 import React from 'react'
 import Link from 'next/link'
 import classes from "./header.module.scss"
+import Search from '@/components/pageParts/Search/Search'
 
 export default function Header() {
   return (
@@ -14,6 +15,7 @@ export default function Header() {
             </Link>
           </div>
           <div className={classes.site_menu}>
+            <Search/>
             <nav className={classes.navigation}>
               <ul>
                 <li>

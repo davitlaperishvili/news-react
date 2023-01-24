@@ -7,6 +7,7 @@ import Image from 'next/image'
 import Link from 'next/link';
 import { API_KEY } from '@/server/vars';
 import PostsList from '@/components/Posts/PostsList';
+import PageTitle from '@/components/pageParts/PageTitle';
 type postsType = {
   news: {
       articles: {
@@ -31,7 +32,7 @@ export default function Home({news} : postsType) {
   return (
     <PageWrapper>
       <MainContainer>
-        <h1 className='page_title'>See All News</h1>
+        <PageTitle title="See All Posts"/>
         <PostsList news={news}/>
       </MainContainer>
     </PageWrapper>
@@ -39,7 +40,6 @@ export default function Home({news} : postsType) {
 }
 Home.getInitialProps = async () => {
   const requestObj = {
-
     action: "getArticles",
     lang: "eng",
     articlesPage: 1,

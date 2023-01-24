@@ -1,12 +1,13 @@
 import MainContainer from '../layouts/MainContainer/MainContainer'
 import PageWrapper from '../layouts/PageWrapper'
 import React from 'react'
+import PageTitle from '@/components/pageParts/PageTitle'
 export default function about() {
   return (
     <>
     <PageWrapper>
       <MainContainer>
-        <h1>About Page</h1>
+        <PageTitle title="About Us"/>
       </MainContainer>
     </PageWrapper>
     </>

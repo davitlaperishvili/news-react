@@ -1,0 +1,45 @@
+@import '../../../source/scss/base/general.scss';
+
+.page_search{
+  margin-right: 40px;
+    .form_wrap{
+      .form_items{
+        display: flex;
+        .form_item{
+          input{
+            padding: 5px 60px 5px 15px;
+            background-color: $cwhite;
+            border-radius: 10px;
+            color: $cbase;
+            width: 300px;
+            &::placeholder{
+              color: $cbase;
+            }
+          }
+          button.form_submit_button{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            background-color: $ccorp;
+            color: $cwhite;
+            margin: 2px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: 0.4s;
+            &:hover{
+              background-color: lighten($ccorp, 10);
+            }
+          }
+          &.form_submit{
+            position: absolute;
+            right: 0;
+            z-index: 2;
+            height: 100%;
+            width: 50px;
+          }
+        }
+      }
+    }
+}   

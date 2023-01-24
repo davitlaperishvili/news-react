@@ -19,6 +19,7 @@ export default function Search() {
     function handleSubmit(e: any) {
         e.preventDefault()
         router.push(`/search/${encodeURIComponent(formValues.searchInput)}`);
+        setFormValues({searchInput: ""});
     }
 
   return (

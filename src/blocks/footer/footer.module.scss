@@ -1,0 +1,34 @@
+@import "../../source/scss/base/general.scss";
+footer.main_footer{
+  background-color: $cbase;
+  padding: 20px 0;
+  .main_footer_wrap{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .logo{
+      a{
+          img{
+              width: 70px;
+          }
+        }
+    }
+    .site_menu{
+        display: flex;
+        align-items: center;
+        .navigation{
+            ul{
+                @extend .no-list;
+                display: flex;
+                align-items: center;
+                gap: 30px;
+                li{
+                    a{
+                        color: $cwhite;
+                    }
+                }
+            }
+        }
+    }
+  }
+}

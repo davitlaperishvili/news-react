@@ -11,7 +11,7 @@ export default function Header() {
         <div className={classes.header_wrap}>
           <div className={classes.logo}>
             <Link href="/">
-              <img src="../logo.png" alt="" />
+              <img src="/logo.png" alt="" />
             </Link>
           </div>
           <div className={classes.site_menu}>

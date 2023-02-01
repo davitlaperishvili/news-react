@@ -1,4 +1,7 @@
 // Tags
+html{
+  height: 100%;
+}
 body{
 	color: $cbase;
 	font-size: 16px;
@@ -12,6 +15,7 @@ body{
 	-ms-text-size-adjust: 100%;
 	-ms-overflow-style: scrollbar;
 	-webkit-tap-highlight-color: rgba($cblack, 0);
+  height: 100%;
 }
 a{
 	color: $ccorp;
@@ -140,7 +144,15 @@ div.container{
 	font-weight: 700;
 	margin-bottom: 40px;
 }
-
+#__next{
+  height: 100%;
+}
+.page_wrapper{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
 .page_content{
+  flex: 1;
 	padding: 100px 0 100px;
 }

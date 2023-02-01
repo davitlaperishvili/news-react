@@ -3,6 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import classes from "./header.module.scss"
 import Search from '@/components/pageParts/Search/Search'
+import SiteMenu from '@/components/Menu/SiteMenu'
 
 export default function Header() {
   return (
@@ -14,22 +15,7 @@ export default function Header() {
               <img src="/logo.png" alt="" />
             </Link>
           </div>
-          <div className={classes.site_menu}>
-            <Search/>
-            <nav className={classes.navigation}>
-              <ul>
-                <li>
-                    <Link href="/">Home</Link>
-                </li>
-                <li>
-                    <Link href="/about">About</Link>
-                </li>
-                <li>
-                    <Link href="/category">Categories</Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
+          <SiteMenu withSearch={true}/>
         </div>
       </MainContainer>
     </header>

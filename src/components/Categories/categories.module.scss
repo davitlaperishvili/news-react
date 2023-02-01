@@ -1,0 +1,45 @@
+@import "../../source/scss/base/general.scss";
+
+.categories_list_wrap{
+  .go_back{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    background-color: $ccorp;
+    color: $cwhite;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: pointer;
+    &:hover{
+      background-color: $cbase
+    }
+  }
+  .categories_list{
+    ul{
+      @extend .no-list;
+      display: grid;
+      grid-gap: 20px;
+      grid-template-columns: repeat(5, 1fr);
+      li{
+        span{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 5px 10px;
+          box-shadow: 0 5px 10px rgba($cblack, 0.5);
+          cursor: pointer;
+          transition: 0.4s;
+          text-align: center;
+          border-radius: 5px;
+          height: 100%;
+          &:hover{
+            background-color: $cbase;
+            color: $cwhite;
+          }
+        }
+      }
+    }
+  }
+}

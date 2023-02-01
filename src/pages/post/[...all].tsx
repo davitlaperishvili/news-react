@@ -53,6 +53,7 @@ export default function PostInside(props: {post: postType; uri: string}) {
   }else{
       author += "No Data"
   }
+  console.log(postInfo)
   return (
     <PageWrapper>
       <MainContainer>
@@ -61,7 +62,7 @@ export default function PostInside(props: {post: postType; uri: string}) {
             <figure>
               <img src={postInfo.image ?? "../no_image.jpg"} alt={postInfo.title} />
             </figure>
-            <div className={classes.post_content}>{postInfo.body}</div>
+            <div className={classes.post_content} dangerouslySetInnerHTML={{__html: postInfo.body}}></div>
             <div className={classes.post_details}>
               <div className={classes.post_date}><span>Created at:</span> {postInfo.date}</div>
               <div className={classes.post_author}><span>Author:</span> {author}</div>

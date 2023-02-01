@@ -24,6 +24,9 @@ export default function Header() {
                 <li>
                     <Link href="/about">About</Link>
                 </li>
+                <li>
+                    <Link href="/category">Categories</Link>
+                </li>
               </ul>
             </nav>
           </div>
